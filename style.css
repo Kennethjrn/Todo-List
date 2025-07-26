@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16pt;
+}
+
+body {
+  /* background-color: #f8fafc; */
+  font-family: "Inter", sans-serif;
+  color: #1f2937;
+  font: 16pt;
+  background: linear-gradient(135deg, #7ef77e, #e40d0d18);
+}
+
+.todo-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.todo-item {
+  background-color: #ffffff;
+  max-width: 600px;
+  width: 90%;
+  font-size: 16pt;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.22);
+}
+
+.todo-item h2 {
+  color: rgb(20, 236, 20);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-item h2 img {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+.todo-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 1000px;
+  /* padding-left: 20px; */
+  margin-bottom: 25px;
+}
+
+.todo-input #input-box {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: 1000px;
+  font: inherit;
+  color: #1f2937;
+  caret-color: #7ef77e;
+}
+
+#input-box:focus {
+  outline: none;
+}
+
+#add-task {
+  border: none;
+  outline: none;
+  height: 100%;
+  padding: 16px 50px;
+  background: #04da04;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 600;
+  border-radius: 1000px;
+  cursor: pointer;
+}
+
+#add-task:hover {
+  background-color: #7ef77e;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 10px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(images/Checkedd.png);
+}
